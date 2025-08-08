@@ -36,7 +36,7 @@ def generar_tarjeta(bin_base):
 
 # Opción para extrapolación avanzada
 def super_extrapolacion():
-    print(f"\n{C}=== SUPER EXTRAPOLACIÓN LOBOJR 🐺 ==={END}")
+    print(f"\n{C}===  EXTRAPOLACIÓN  ==={END}")
     ultimos4 = input(f"{Y}[+] Ingresa los últimos 4 dígitos de una tarjeta real: {END}")
     bin1 = input(f"{Y}[+] Ingresa el BIN base 1 (16 dígitos reales): {END}")
     bin2 = input(f"{Y}[+] Ingresa el BIN base 2 (16 dígitos reales): {END}")
@@ -90,20 +90,20 @@ def generar_desde_bin(bin_base):
         print(f"{G}[✓] {t} {END}")
 
     if input(f"\n{Y}[?] ¿Deseas guardar en .txt? (s/n): {END}").lower() == 's':
-        with open("tarjetas_lobojr.txt", "w") as f:
+        with open("ccs spartan.txt", "w") as f:
             for t in tarjetas:
                 f.write(t + "\n")
-        print(f"{M}[✓] Guardado en tarjetas_lobojr.txt{END}")
+        print(f"{M}[✓] Guardado en ccs spartan.txt{END}")
 
 # Menú principal
 def main():
     while True:
         os.system("clear")
         print(f"{M}╔══════════════════════════════════════════╗")
-        print(f"{M}║   {C}LOBOJR GENERADOR DE TARJETAS v3 🐺💳   {M}║")
+        print(f"{M}║   {C}GENERADOR DE TARJETAS SPARTAN {M}   ║")
         print(f"{M}╚══════════════════════════════════════════╝{END}")
         print(f"\n{Y}1. Generar tarjetas normales")
-        print(f"2. Super Extrapolación")
+        print(f"2. Generar tarjetas con extrapolación")
         print(f"3. Salir{END}")
 
         opcion = input(f"{C}\n[?] Selecciona una opción: {END}")
@@ -119,7 +119,7 @@ def main():
             super_extrapolacion()
             input(f"\n{C}[↩] Presiona ENTER para volver al menú...{END}")
         elif opcion == '3':
-            print(f"{G}[✓] Hasta pronto, LOBOJR 🐺{END}")
+            print(f"{G}[✓] LISTO, SPARTAN {END}")
             break
         else:
             print(f"{R}[!] Opción inválida.{END}")
